@@ -1,3 +1,17 @@
+:root {
+  --background-color: 248, 246, 240;
+
+  --primary-text-color: 45, 39, 26;
+}
+
+html {
+  color: rgb(var(--primary-text-color));
+}
+
+body {
+  background-color: rgb(var(--background-color));
+}
+
 .main-col {
   max-width: 550px;
   margin: 0 auto;
