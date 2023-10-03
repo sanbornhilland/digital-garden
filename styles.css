@@ -2,10 +2,24 @@
   --background-color: 248, 246, 240;
 
   --primary-text-color: 45, 39, 26;
+  --secondary-text-color: 4, 51, 172;
+
+  --font-base: clamp(1.25rem, 1vw + 1rem, 1.4rem);
+
+  --line-height-base: 1.5;
 }
 
 html {
   color: rgb(var(--primary-text-color));
+
+  font-size: 20px;
+  font-size: var(--font-base);
+
+  line-height: var(--line-height-base);
+}
+
+a {
+  color: rgb(var(--secondary-text-color));
 }
 
 body {
