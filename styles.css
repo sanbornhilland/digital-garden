@@ -26,6 +26,10 @@ body {
   background-color: rgb(var(--background-color));
 }
 
+time {
+  font-size: 0.8rem;
+}
+
 .main-col {
   max-width: 550px;
   margin: 0 auto;
