@@ -1,31 +1,125 @@
 <html lang="en">
-<link>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sanborn's Digital Garden</title>
-  <link href="/modern-normalize.css" rel="stylesheet"></link>
-  <link href="/styles.css" rel="stylesheet"></link>
-</head>
-<body>
-  <main class="main-col">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sanborn's Digital Garden</title>
+    <link href="/modern-normalize.css" rel="stylesheet" />
+    <link href="/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main class="main-col">
+      <h1>Sanborn Hilland</h1>
+      <ul>
+        <li><a href="mailto:sanbornh@rogers.com">email</a></li>
+        <li><a href="https://github.com/sanbornhilland">github</a></li>
+      </ul>
 
-    <h1>Sanborn Hilland </h1>
-    <ul>
-      <li><a href="mailto:sanbornh@rogers.com">email</a></li>
-      <li><a href="https://github.com/sanbornhilland">github</a></li>
-    </ul>
-    <p>
-      I'm intrigued by this idea of a <a href="https://www.technologyreview.com/2020/09/03/1007716/digital-gardens-let-you-cultivate-your-own-little-bit-of-the-internet">digital garden</a>. Unlike a blog which typically includes fully formed thoughts and well written posts, a digital garden is a working document whose main audience is often the author themselves. It's a place where someone can work out ideas of interest in public. This appeals to me as a method for being more structured in thinking and learning.
-    </p>
-    <p>
-      That said, this idea has appealed to me for a while now and I still don't have a digital garden up and running. Why not? Because every time I think of doing this it spirals out into a list of other questions. "What pages should it have?" "What technology should I use to build it?" "Where should I host it?" And then nothing gets done. A blank canvas is too daunting. In art school I learned that it's often best to just put something down on the canvas. Anything. It could be a line across the middle, or a big circle. The point is, just start and eventually the rest will follow.
-    </p>
-    <p>
-      So that's what this is. I'm marking up the canvas in the most minimal way possible. One "index.html" in a git repo, hosted as a <a href="https://pages.github.com/">Github page.</a> And in the spirit of a digital garden (and mixed metaphors), we'll see how it grows from here.
-    </p>
-    <time datetime="2023-09-28">
-      Thursday, September 28
-    </time>
-  </main>
-</body>
+      <article>
+        <h2>On DRY</h2>
+        <p>
+          This was something I was taught early on in my first programming
+          course. It often feels like keeping code DRY is a significant
+          part of what programming is about. It's about finding those
+          abstractions. So not finding (or ignoring) those abstractions is
+          emotionally very hard. It feels like I am not doing one of the
+          primary things I am tasked with doing. Not keeping my code DRY makes me a bad developer. When writing code, as soon
+          as I see similarities, every fiber of my being is urging me to
+          refactor and make that code DRY. For most of my time as a programmer I
+          would have immediately given into that urge but recently I've become
+          convinced by many of the arguments against premature DRYing like
+          <a
+            href="https://testing.googleblog.com/2024/05/dont-dry-your-code-prematurely.html"
+            >this one</a
+          >.
+        </p>
+
+        <p>
+          This is hard advice to put into action, when you've had DRY drilled
+          into you for so long. You have to fight that feeling. And what I've
+          realized is that you have to fight it for a long time. Because often the
+          pieces of code you are working on will develop in the same way for some
+          time. And so at each stage where you add something new in both places
+          you think, “okay surely now I can refactor this”. But this should be
+          resisted! Keep it going for a while and often you will find critical
+          bits of divergence so that not keeping your code DRY will have paid off.
+          It really isn't that difficult to develop these similar pieces of code
+          in parrallel. The hard part is just ignoring the screaming impulse to
+          refactor. I have found this has resulted in simpler code
+          because I am no longer torturing these abstractions into place.
+        </p>
+
+        <p>Two examples:</p>
+
+        <ul>
+          <li>
+            For an HTMLCanvas compositing library - I have been waiting to
+            abstract. It's killing me because there are many entities that can
+            be added to a scene graph and they need to have many of the same
+            attributes. But realistically duplication hasn't slowed me down and
+            is leading to better understanding about what is truly similar
+            between all these objects and what is divergent.
+          </li>
+          <li>
+            For a live video studio - I have waited to abstract a lot of
+            repeated UI code for different video sources (webcams, screenshares,
+            WebRTC streams, local videos) and I was able to iterate very
+            quickly. It's turning out that the requirements are actually
+            importantly different between these different source types and I
+            think that I am unlikely to condense these into a single
+            abstraction. DRYing early would have made for some very awkward
+            abstractions.
+          </li>
+        </ul>
+
+        <p>
+          This
+          <a
+            href="https://testing.googleblog.com/2024/05/dont-dry-your-code-prematurely.html"
+            >Google Testing Blog article</a
+          >
+          sums it up brilliantly: "When in doubt, keep behaviors separate until
+          enough common patterns emerge over time that justify the coupling. On
+          a small scale, managing duplication can be simpler than resolving a
+          premature abstraction's complexity. In early stages of development,
+          tolerate a little duplication and wait to abstract."
+        </p>
+
+        <time datetime="2024-05-31"> September 28 </time>
+      </article>
+
+      <article>
+        <h2>Initial post</h2>
+        <p>
+          I'm intrigued by this idea of a
+          <a
+            href="https://www.technologyreview.com/2020/09/03/1007716/digital-gardens-let-you-cultivate-your-own-little-bit-of-the-internet"
+            >digital garden</a
+          >. Unlike a blog which typically includes fully formed thoughts and
+          well written posts, a digital garden is a working document whose main
+          audience is often the author themselves. It's a place where someone
+          can work out ideas of interest in public. This appeals to me as a
+          method for being more structured in thinking and learning.
+        </p>
+        <p>
+          That said, this idea has appealed to me for a while now and I still
+          don't have a digital garden up and running. Why not? Because every
+          time I think of doing this it spirals out into a list of other
+          questions. "What pages should it have?" "What technology should I use
+          to build it?" "Where should I host it?" And then nothing gets done. A
+          blank canvas is too daunting. In art school I learned that it's often
+          best to just put something down on the canvas. Anything. It could be a
+          line across the middle, or a big circle. The point is, just start and
+          eventually the rest will follow.
+        </p>
+        <p>
+          So that's what this is. I'm marking up the canvas in the most minimal
+          way possible. One "index.html" in a git repo, hosted as a
+          <a href="https://pages.github.com/">Github page.</a> And in the spirit
+          of a digital garden (and mixed metaphors), we'll see how it grows from
+          here.
+        </p>
+        <time datetime="2023-09-28"> September 28 </time>
+      </article>
+    </main>
+  </body>
 </html>
