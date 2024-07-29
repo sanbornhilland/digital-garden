@@ -7,6 +7,13 @@
   --font-base: clamp(1.25rem, 1vw + 1rem, 1.4rem);
 
   --line-height-base: 1.5;
+
+  --size-1: 1px;
+  --size-2: 2px;
+  --size-3: 4px;
+  --size-4: 8px;
+  --size-5: 16px;
+  --size-6: 32px;
 }
 
 html {
@@ -33,4 +40,22 @@ time {
 .main-col {
   max-width: 550px;
   margin: 0 auto;
+}
+
+.header-links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: var(--size-5);
+}
+
+.header-links li {
+  padding: var(--size-3) var(--size-4);
+  background: rgb(var(--primary-text-color));
+}
+
+.header-links li a {
+  color: rgb(var(--background-color));
+  text-decoration: none;
 }
