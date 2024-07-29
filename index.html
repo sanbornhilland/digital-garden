@@ -9,24 +9,26 @@
   <body>
     <main class="main-col">
       <h1>Sanborn Hilland</h1>
-      <ul>
+      <ul class="header-links">
         <li><a href="mailto:sanbornh@rogers.com">email</a></li>
         <li><a href="https://github.com/sanbornhilland">github</a></li>
+        <li><a href="www.linkedin.com/in/sanborn-hilland-7889847a">linkedin</a></li>
       </ul>
 
       <article>
         <h2>On DRY</h2>
         <p>
           This was something I was taught early on in my first programming
-          course. It often feels like keeping code DRY is a significant
-          part of what programming is about. It's about finding those
-          abstractions. So not finding (or ignoring) those abstractions is
-          emotionally very hard. It feels like I am not doing one of the
-          primary things I am tasked with doing. Not keeping my code DRY makes me a bad developer. When writing code, as soon
-          as I see similarities, every fiber of my being is urging me to
-          refactor and make that code DRY. For most of my time as a programmer I
-          would have immediately given into that urge but recently I've become
-          convinced by many of the arguments against premature DRYing like
+          course. It often feels like keeping code DRY is a significant part of
+          what programming is about. It's about finding those abstractions. So
+          not finding (or ignoring) those abstractions is emotionally very hard.
+          It feels like I am not doing one of the primary things I am tasked
+          with doing. Not keeping my code DRY makes me a bad developer. When
+          writing code, as soon as I see similarities, every fiber of my being
+          is urging me to refactor and make that code DRY. For most of my time
+          as a programmer I would have immediately given into that urge but
+          recently I've become convinced by many of the arguments against
+          premature DRYing like
           <a
             href="https://testing.googleblog.com/2024/05/dont-dry-your-code-prematurely.html"
             >this one</a
@@ -36,16 +38,17 @@
         <p>
           This is hard advice to put into action, when you've had DRY drilled
           into you for so long. You have to fight that feeling. And what I've
-          realized is that you have to fight it for a long time. Because often the
-          pieces of code you are working on will develop in the same way for some
-          time. And so at each stage where you add something new in both places
-          you think, “okay surely now I can refactor this”. But this should be
-          resisted! Keep it going for a while and often you will find critical
-          bits of divergence so that not keeping your code DRY will have paid off.
-          It really isn't that difficult to develop these similar pieces of code
-          in parrallel. The hard part is just ignoring the screaming impulse to
-          refactor. I have found this has resulted in simpler code
-          because I am no longer torturing these abstractions into place.
+          realized is that you have to fight it for a long time. Because often
+          the pieces of code you are working on will develop in the same way for
+          some time. And so at each stage where you add something new in both
+          places you think, “okay surely now I can refactor this”. But this
+          should be resisted! Keep it going for a while and often you will find
+          critical bits of divergence so that not keeping your code DRY will
+          have paid off. It really isn't that difficult to develop these similar
+          pieces of code in parrallel. The hard part is just ignoring the
+          screaming impulse to refactor. I have found this has resulted in
+          simpler code because I am no longer torturing these abstractions into
+          place.
         </p>
 
         <p>Two examples:</p>
