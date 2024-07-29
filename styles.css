@@ -38,8 +38,10 @@ time {
 }
 
 .main-col {
-  max-width: 550px;
+  max-width: 640px;
   margin: 0 auto;
+  padding-inline: var(--size-6);
+  padding-bottom: var(--size-6);
 }
 
 .header-links {
