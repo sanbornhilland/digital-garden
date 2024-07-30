@@ -61,3 +61,14 @@ time {
   color: rgb(var(--background-color));
   text-decoration: none;
 }
+
+.article-title {
+}
+
+.article-title::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: var(--size-3);
+  background: rgb(var(--primary-text-color));
+}
