@@ -2,9 +2,14 @@
   --background-color: 248, 246, 240;
 
   --primary-text-color: 45, 39, 26;
+  --primary-text-color-light: 115, 107, 90;
   --secondary-text-color: 4, 51, 172;
 
   --font-base: clamp(1.25rem, 1vw + 1rem, 1.4rem);
+
+  --font-weight-light: 300;
+  --font-weight-medium: 500;
+  --font-weight-heavy: 700;
 
   --line-height-base: 1.5;
 
@@ -21,6 +26,7 @@ html {
 
   font-size: 20px;
   font-size: var(--font-base);
+  font-weight: var(--font-weight-light);
 
   line-height: var(--line-height-base);
 }
@@ -33,12 +39,42 @@ body {
   background-color: rgb(var(--background-color));
 }
 
+li + li {
+  margin-top: var(--size-4);
+}
+
+blockquote {
+  position: relative;
+  font-style: italic;
+}
+
+blockquote::before {
+  --padding: 32px;
+
+  content: "";
+  display: block;
+
+  opacity: 0.05;
+  background: grey;
+
+  width: calc(100% + var(--padding));
+  height: calc(100% + var(--padding));
+
+  position: absolute;
+  top: calc(var(--padding));
+  left: calc(var(--padding));
+
+  transform-origin: top left;
+  transform: skewY(-2deg) rotate(-2deg) rotateY(22deg);
+}
+
 time {
   font-size: 0.8rem;
+  color: rgb(var(--primary-text-color-light));
 }
 
 .main-col {
-  max-width: 640px;
+  max-width: 720px;
   margin: 0 auto;
   padding-inline: var(--size-6);
   padding-bottom: var(--size-6);
